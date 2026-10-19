@@ -16,7 +16,7 @@ assets/posters/         Poster images shown on the episode cards (replace with y
 assets/images/          Video poster frames, stills, favicon
 assets/fonts/           Fraunces and Figtree (OFL licensed), loaded locally
 captions/               episode-01..03.vtt: WebVTT captions, timed from the narration script
-assets/docs/            Report and presentation for assessment: BLOOM_Report.pdf, BLOOM_Presentation.pdf
+assets/docs/            Signed report, presentation slides and signed AI acknowledgements (PDF)
 
 AI ASSISTANCE
 The website (layout, code, styles and this README) was built by anugraha and enhanced with Claude Code,

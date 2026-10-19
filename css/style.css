@@ -211,7 +211,7 @@ tr:last-child td{border-bottom:0}
 .doc:hover{border-color:var(--ember);transform:translateY(-4px)}
 .doc-icon{width:64px;height:64px;border-radius:16px;background:rgba(217,119,47,.14);color:var(--ember-light);display:grid;place-items:center}
 .doc-icon svg{width:34px;height:34px}
-.doc-body{display:flex;flex-direction:column;gap:8px}
+.doc-body{display:flex;flex-direction:column;gap:8px;min-width:0;overflow-wrap:anywhere}
 .doc-meta{font:600 12px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--ember-light)}
 .doc h3{font-size:26px;font-weight:700}
 .doc p{color:var(--muted);font-size:15px}
@@ -269,6 +269,11 @@ tr:last-child td{border-bottom:0}
   .specs{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:600px){
+  .doc{grid-template-columns:1fr;padding:20px;gap:16px}
+  .doc-icon{width:48px;height:48px;border-radius:12px}
+  .doc-icon svg{width:28px;height:28px}
+  .doc-actions{flex-direction:column;align-items:flex-start}
+  .doc-actions .btn{max-width:100%;padding-inline:20px}
   .nav a{padding:8px 10px;font-size:14px}
   .brand{font-size:22px}
   .rail{grid-template-columns:repeat(3,78%)}

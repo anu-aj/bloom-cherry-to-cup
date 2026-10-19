@@ -19,8 +19,12 @@ captions/               episode-01..03.vtt: WebVTT captions, timed from the narr
 assets/docs/            Report and presentation for assessment: BLOOM_Report.pdf, BLOOM_Presentation.pdf
 
 AI ASSISTANCE
-The website (layout, code, styles and this README) was built with Claude Code,
+The website (layout, code, styles and this README) was built and enhanced with Claude Code,
 Anthropic's AI coding assistant (Claude Opus), working from Anugraha's design direction.
+The website animations (the floating cup, steam and pour, drifting clouds, scroll reveals,
+the click bee and the episode crossfade) were made with Claude's assistance.
+Claude also pushed the code to GitHub and deployed it on GitHub Pages:
+  https://anu-aj.github.io/bloom-cherry-to-cup/
 ChatGPT gave step-by-step guidance for the animation and video compositing.
 Full credits are on behind-the-scenes.html.
 

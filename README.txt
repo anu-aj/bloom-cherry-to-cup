@@ -19,7 +19,7 @@ captions/               episode-01..03.vtt: WebVTT captions, timed from the narr
 assets/docs/            Report and presentation for assessment: BLOOM_Report.pdf, BLOOM_Presentation.pdf
 
 AI ASSISTANCE
-The website (layout, code, styles and this README) was built and enhanced with Claude Code,
+The website (layout, code, styles and this README) was built by anugraha and enhanced with Claude Code,
 Anthropic's AI coding assistant (Claude Opus), working from Anugraha's design direction.
 The website animations (the floating cup, steam and pour, drifting clouds, scroll reveals,
 the click bee and the episode crossfade) were made with Claude's assistance.

@@ -1,0 +1,8 @@
+# Working report draft: not part of the website (export it to assets/docs/BLOOM_Report.pdf instead)
+BLOOM_Working_Report*.docx
+~$*
+
+# OS files
+Thumbs.db
+desktop.ini
+.DS_Store

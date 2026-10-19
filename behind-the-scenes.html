@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Behind the scenes — BLOOM</title>
+<meta name="description" content="How BLOOM was made: Blender modelling, animation and Alpha Over compositing, Figma logo and posters, Canva editing and subtitles, narration in Anugraha's own voice, and exactly where AI helped.">
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="BLOOM home">BLOOM</a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="index.html#episodes">Episodes</a>
+      <a href="index.html#girl">Meet the girl</a>
+      <a href="index.html#craft">How it's made</a>
+      <a href="behind-the-scenes.html" aria-current="page">Behind the scenes</a>
+      <a href="index.html#documents">Documents</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="eyebrow">Behind the scenes</div>
+      <h1>How a cherry becomes a cup, frame by frame.</h1>
+      <p>BLOOM is a student project for COMP5415 Multimedia Design and Authoring at the University of Sydney. This page shows how each part was made, and which parts were done by hand and which had AI help.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="who-title">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Credits</div>
+        <h2 id="who-title">Who made what.</h2>
+        <p>Every part of BLOOM: the tools used, what Anugraha did herself, and where AI helped.</p>
+      </div>
+      <div class="table-wrap reveal">
+        <table aria-label="Who made each part of BLOOM">
+          <thead><tr><th scope="col">Part</th><th scope="col">Tools</th><th scope="col">Anugraha's own work</th><th scope="col">AI assistance</th></tr></thead>
+          <tbody>
+            <tr><td>Story and narration script</td><td>Written by Anugraha</td><td>The three-episode story and the narration script</td><td>AI checked that the story was doable in Blender</td></tr>
+            <tr><td>Mood board and first-draft storyboard</td><td>Pinterest and Google Images, Figma</td><td>Gathered the reference images and designed the first-draft storyboard in Figma. No reference image is used in the final work</td><td>Claude helped ideate the first-draft storyboard</td></tr>
+            <tr><td>Logo</td><td>Figma</td><td>Made the final blossom logo in Figma</td><td>Claude helped ideate it and supplied a draft vector</td></tr>
+            <tr><td>Posters (3)</td><td>Figma, Blender renders</td><td>Made the posters in Figma from her own Blender renders, and chose the frames and titles</td><td>Claude helped ideate them and supplied mock-ups and draft layered files</td></tr>
+            <tr><td>3D modelling and animation</td><td>Blender</td><td>Built and animated everything in Blender, including the wave, keyframed in the Graph Editor</td><td>ChatGPT gave step-by-step instructions and Python scripts, and helped fix overlaps and errors</td></tr>
+            <tr><td>Video compositing</td><td>Blender compositor</td><td>Set up and explored Alpha Over composition in Scene 1</td><td>ChatGPT gave instructions for the compositor setup</td></tr>
+            <tr><td>Narration audio</td><td>Her own voice, Canva</td><td>Recorded the voice herself, then edited and synced it in Canva</td><td>ChatGPT was used to alter the pitch of her recorded voice</td></tr>
+            <tr><td>Music and sound effects</td><td>ChatGPT, Canva</td><td>Combined the music and effects with the narration and video in Canva</td><td>ChatGPT fetched the music and effects, made with Python/NumPy synthesis, not stock recordings</td></tr>
+            <tr><td>Captions</td><td>Canva, WebVTT</td><td>Wrote the captioned words and timed each caption to her narration by hand</td><td><span class="none">None</span></td></tr>
+            <tr><td>Website</td><td>HTML, CSS, JavaScript</td><td>Content, media, credits and final checks</td><td>Claude helped ideate it and drafted the code, updated through Claude Code</td></tr>
+            <tr><td>Presentation</td><td>Canva</td><td>Reworked and finished the slides in Canva</td><td>Claude drafted the structure and speaker notes</td></tr>
+            <tr><td>Report</td><td>Word</td><td>Her own account of the work, which the report is based on</td><td>An earlier draft was prepared with ChatGPT; the final version was rewritten with Claude</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="ack reveal" aria-labelledby="ack-title">
+        <h3 id="ack-title" class="ack-title">Acknowledgements</h3>
+        <div class="ack-grid">
+          <div class="ack-item">
+            <span class="badge ai">AI assistance</span>
+            <h4>ChatGPT Astra and Claude Opus</h4>
+            <div class="ai-logos">
+              <span class="ai-logo"><img src="assets/images/ai/chatgpt.svg" alt="" width="32" height="32">ChatGPT Astra</span>
+              <span class="ai-logo"><img src="assets/images/ai/claude.svg" alt="" width="32" height="32">Claude Opus</span>
+            </div>
+            <p><strong>ChatGPT</strong> gave step-by-step Blender instructions, Python scripts for the Bezier and procedural animation, guidance for the Alpha Over setup, fixes for overlaps and errors, the voice pitch change and the synthesised music and effects.</p>
+            <p><strong>Claude</strong> helped ideate the storyboard, logo, posters and website, drafted the website code (updated through Claude Code) and the presentation structure and speaker notes, and helped rewrite the report.</p>
+          </div>
+          <div class="ack-item">
+            <span class="badge own">Teaching</span>
+            <h4>COMP5415 unit coordinator, University of Sydney</h4>
+            <p>The lab practice sessions run by the unit coordinator taught the skills used to build BLOOM.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section alt" aria-labelledby="tools-title">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Tools used</div>
+        <h2 id="tools-title">Three tools, one little film.</h2>
+        <p>BLOOM was built with three main programs. FreeMoCap was also tried for the wave, but the laptop could not process the recording, so it was not used.</p>
+      </div>
+      <ul class="tools">
+        <li class="tool reveal" style="--tool:#E87D0D">
+          <span class="tool-logo"><img src="assets/images/tools/blender.svg" alt="" width="56" height="56"></span>
+          <h3>Blender</h3>
+          <p class="tool-role">Modelling, animation and compositing</p>
+          <p>The girl, the floating islands, every prop and every keyframe were made in Blender, along with the Bezier curves, Python scripts and Alpha Over compositing.</p>
+        </li>
+        <li class="tool reveal" style="--tool:#A259FF">
+          <span class="tool-logo"><img src="assets/images/tools/figma.svg" alt="" width="56" height="56"></span>
+          <h3>Figma</h3>
+          <p class="tool-role">Logo, posters and storyboard</p>
+          <p>The BLOOM blossom logo, the three episode posters and the first-draft storyboard were designed in Figma.</p>
+        </li>
+        <li class="tool reveal" style="--tool:#00C4CC">
+          <span class="tool-logo"><img src="assets/images/tools/canva.svg" alt="" width="56" height="56"></span>
+          <h3>Canva</h3>
+          <p class="tool-role">Editing, audio sync and subtitles</p>
+          <p>Canva was used to edit the episodes, mix the narration with the music and effects, sync them to the picture and time every subtitle by hand. The presentation was finished in Canva too.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="steps-title">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">The pipeline</div>
+        <h2 id="steps-title">From sketch to screen in six steps.</h2>
+      </div>
+      <ol class="steps">
+        <li class="step reveal"><div><h3>Write the story <span class="badge own">Own work</span></h3><p>Anugraha wrote the three-episode story and the narration script, gathered a mood board of reference images and designed the first-draft storyboard in Figma.</p></div></li>
+        <li class="step reveal"><div><h3>Model and animate <span class="badge ai">AI-guided</span></h3><p>Each 960-frame scene was built and keyframed in Blender, following step-by-step instructions from ChatGPT. Bezier curves and Python scripts drive the milk stream, the coffee waterfall and the girl's limb poses, and ChatGPT helped fix overlaps and errors.</p></div></li>
+        <li class="step reveal"><div><h3>Keyframe the wave <span class="badge own">Own work</span></h3><p>A FreeMoCap motion-capture attempt kept crashing the laptop, so Anugraha keyframed the girl's wave by hand in Blender's Animation workspace and Graph Editor.</p></div></li>
+        <li class="step reveal"><div><h3>Composite the layers <span class="badge ai">AI-guided</span></h3><p>In Scene 1 the girl and the scenery render as separate layers, joined by two Alpha Over nodes in the Blender compositor. ChatGPT gave instructions for the setup.</p></div></li>
+        <li class="step reveal"><div><h3>Voice and sound <span class="badge ai">AI-assisted</span></h3><p>The narration is Anugraha's own voice, pitch-shifted with ChatGPT to sound like a storyteller. The music and effects, fetched using ChatGPT, were synthesised with Python/NumPy, not stock recordings.</p></div></li>
+        <li class="step reveal"><div><h3>Edit, caption and publish <span class="badge own">Own work</span></h3><p>In Canva, Anugraha synced the narration, music and effects to the picture and timed every subtitle by hand. The three episodes were exported as MP4 and placed on this site.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section alt" aria-labelledby="specs-title">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">The numbers</div>
+        <h2 id="specs-title">Small film, careful details.</h2>
+      </div>
+      <div class="specs">
+        <div class="spec reveal"><b>3</b><span>episodes, each 40 seconds</span></div>
+        <div class="spec reveal"><b>960</b><span>frames per scene, at 24 fps</span></div>
+        <div class="spec reveal"><b>2 min</b><span>total running time</span></div>
+        <div class="spec reveal"><b>137</b><span>named objects build the girl</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="posters-title">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Posters</div>
+        <h2 id="posters-title">One poster per episode.</h2>
+        <p>Made in Figma from Anugraha's own Blender renders. Each poster shares the same dark frame, BLOOM wordmark and journey tracker (harvest, roast and grind, brew), so the three read as one series, and each episode gets its own accent colour: cherry red, roast gold and crema cream.</p>
+      </div>
+      <div class="posters">
+        <img class="reveal" src="assets/posters/poster-01.webp" alt="Poster for Episode 1, Cherry Hill" loading="lazy">
+        <img class="reveal" src="assets/posters/poster-02.webp" alt="Poster for Episode 2, The Little Fire" loading="lazy">
+        <img class="reveal" src="assets/posters/poster-03.webp" alt="Poster for Episode 3, The Bloom" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" aria-labelledby="cta-title">
+    <div class="wrap">
+      <h2 id="cta-title">Now watch what we made.</h2>
+      <a class="btn" href="index.html#episodes">Go to the episodes</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>BLOOM · FROM CHERRY TO CUP</span>
+    <span>COMP5415 · UNIVERSITY OF SYDNEY</span>
+    <span class="footer-credit">AI assistance: ChatGPT Astra and Claude Opus · Lab practice: COMP5415 unit coordinator, University of Sydney</span>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

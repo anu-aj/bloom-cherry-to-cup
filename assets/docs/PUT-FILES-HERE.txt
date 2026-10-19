@@ -1,0 +1,7 @@
+Put the assessment documents in this folder with these exact names:
+
+  BLOOM_Report.pdf          the written report
+  BLOOM_Presentation.pdf    the presentation slides (export from PowerPoint/Canva as PDF)
+
+The Documents section on the homepage links to these names. If you use a different
+name or format (for example a .pptx), change the href in the #documents section of index.html.

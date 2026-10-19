@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BLOOM - From Cherry to Cup</title>
+<meta name="description" content="BLOOM is a three-episode 3D animated fairy tale about how coffee gets from cherry to cup, made in Blender.">
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#episodes">Skip to the episodes</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="BLOOM home">BLOOM</a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" aria-current="page" data-nav="top">Home</a>
+      <a href="#episodes" data-nav="episodes">Episodes</a>
+      <a href="#girl" data-nav="girl">Meet the girl</a>
+      <a href="#craft" data-nav="craft">How it's made</a>
+      <a href="behind-the-scenes.html">Behind the scenes</a>
+      <a href="#documents" data-nav="documents">Documents</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="cloud" style="top:60px;left:0;width:240px" aria-hidden="true"></div>
+  <div class="cloud" style="top:190px;left:0;width:170px;animation-delay:-34s" aria-hidden="true"></div>
+  <svg class="hills" aria-hidden="true" viewBox="0 0 1440 190" preserveAspectRatio="none">
+    <path d="M0 80 Q240 14 520 70 T1040 52 T1440 80 V190 H0 Z" fill="#6E8B4F"/>
+    <path d="M0 122 Q300 60 640 112 T1440 104 V190 H0 Z" fill="#4F7A3F"/>
+    <path d="M0 164 Q360 112 760 156 T1440 148 V190 H0 Z" fill="#355F2D"/>
+  </svg>
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="eyebrow">A floating fairy tale · 3 episodes</div>
+      <h1 id="hero-title">BLOOM</h1>
+      <p class="tagline">From cherry to cup, high above the clouds.</p>
+      <p class="lede">Follow a girl with a wand, a hovering basket and one very curious bee through the story of coffee, across a sky full of floating islands.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" type="button" data-play-all>
+          <svg viewBox="0 0 14 16" aria-hidden="true"><path d="M1 1 L13 8 L1 15 Z" fill="currentColor"/></svg>
+          Watch the whole film
+        </button>
+        <a class="btn btn-ghost" href="#episodes">Choose an episode</a>
+      </div>
+    </div>
+
+    <div class="cup-stage">
+      <button class="cup-btn" id="cup" type="button" aria-label="Click the giant cup to open the episodes">
+        <svg class="cup-svg" viewBox="0 0 640 520" role="img" aria-label="A white coffee cup on a saucer with a white flower floating on the coffee and steam rising">
+          <defs>
+            <linearGradient id="cupGrad" x1="0" x2="1" y1="0" y2="0">
+              <stop offset="0" stop-color="#E6DACA"/><stop offset=".35" stop-color="#FBF7F0"/><stop offset=".7" stop-color="#F1E8DA"/><stop offset="1" stop-color="#D9CCB9"/>
+            </linearGradient>
+            <radialGradient id="coffeeGrad" cx=".45" cy=".4" r=".7">
+              <stop offset="0" stop-color="#A5603A"/><stop offset="1" stop-color="#6A3A1E"/>
+            </radialGradient>
+          </defs>
+          <ellipse cx="320" cy="482" rx="272" ry="22" fill="#000" opacity=".35"/>
+          <ellipse cx="320" cy="446" rx="272" ry="48" fill="#EDE3D3"/>
+          <ellipse cx="320" cy="438" rx="206" ry="30" fill="#DDD0BC"/>
+          <path d="M508 262 C598 250 606 374 482 386" fill="none" stroke="#EFE6D8" stroke-width="24" stroke-linecap="round"/>
+          <path d="M130 232 H510 C510 352 450 434 320 434 C190 434 130 352 130 232 Z" fill="url(#cupGrad)"/>
+          <ellipse cx="320" cy="232" rx="190" ry="46" fill="#FBF7F0"/>
+          <ellipse cx="320" cy="234" rx="172" ry="38" fill="url(#coffeeGrad)"/>
+          <ellipse class="ripple" cx="320" cy="234" rx="150" ry="30"/>
+          <ellipse class="ripple" cx="320" cy="234" rx="150" ry="30"/>
+          <g transform="translate(320 234) scale(.72 .28)">
+            <g class="flower">
+              <ellipse cx="46" cy="0" rx="44" ry="17" fill="#FBF7F0"/>
+              <ellipse cx="46" cy="0" rx="44" ry="17" fill="#FBF7F0" transform="rotate(72)"/>
+              <ellipse cx="46" cy="0" rx="44" ry="17" fill="#FBF7F0" transform="rotate(144)"/>
+              <ellipse cx="46" cy="0" rx="44" ry="17" fill="#FBF7F0" transform="rotate(216)"/>
+              <ellipse cx="46" cy="0" rx="44" ry="17" fill="#FBF7F0" transform="rotate(288)"/>
+              <circle r="15" fill="#E8C979"/>
+            </g>
+          </g>
+          <g class="steam" aria-hidden="true">
+            <path d="M268 190 C246 150 292 130 270 88"/>
+            <path d="M322 184 C300 140 344 118 322 74"/>
+            <path d="M374 190 C352 152 394 136 372 98"/>
+          </g>
+        </svg>
+        <span class="tag">Click the cup to begin</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- EPISODES -->
+<section class="section" id="episodes" aria-labelledby="episodes-title">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Season 1</div>
+      <h2 id="episodes-title">Three episodes, one cup of coffee.</h2>
+      <p>Each episode is 40 seconds, narrated and scored. Pick a poster to bring it up on the big screen, then press play, or watch all three back to back.</p>
+    </div>
+
+    <h3 class="rail-title reveal">Season 1 <span>Hover or tap an episode to preview it · 2 min total</span></h3>
+    <ol class="rail">
+      <li class="ep reveal is-active">
+        <div class="ep-poster">
+          <img src="assets/posters/poster-01.webp" alt="Poster for Episode 1, Cherry Hill: the girl with her magic wand and basket by the cherry tree" loading="lazy">
+          <span class="ep-now" aria-hidden="true">Now showing</span>
+        </div>
+        <div class="ep-body">
+          <div class="ep-meta"><span>EPISODE 1</span><span>0:40</span></div>
+          <h3>Cherry Hill</h3>
+          <p>Ride, leap and harvest: only the ripe cherries come home in the basket.</p>
+        </div>
+        <button class="ep-link" type="button" data-select="0" aria-controls="billboard" aria-pressed="true" aria-label="Show Episode 1: Cherry Hill"></button>
+      </li>
+      <li class="ep reveal">
+        <div class="ep-poster">
+          <img src="assets/posters/poster-02.webp" alt="Poster for Episode 2, The Little Fire: the girl with her wand at the little mill, a bee buzzing overhead" loading="lazy">
+          <span class="ep-now" aria-hidden="true">Now showing</span>
+        </div>
+        <div class="ep-body">
+          <div class="ep-meta"><span>EPISODE 2</span><span>0:40</span></div>
+          <h3>The Little Fire</h3>
+          <p>Cherries are pulped, dried, roasted and ground at the little mill in the clouds.</p>
+        </div>
+        <button class="ep-link" type="button" data-select="1" aria-controls="billboard" aria-pressed="false" aria-label="Show Episode 2: The Little Fire"></button>
+      </li>
+      <li class="ep reveal">
+        <div class="ep-poster">
+          <img src="assets/posters/poster-03.webp" alt="Poster for Episode 3, The Bloom: a white flower opening on a cup of coffee" loading="lazy">
+          <span class="ep-now" aria-hidden="true">Now showing</span>
+        </div>
+        <div class="ep-body">
+          <div class="ep-meta"><span>EPISODE 3</span><span>0:40</span></div>
+          <h3>The Bloom</h3>
+          <p>Milk streams into the filter, a coffee waterfall fills the giant cup and a blossom opens on top.</p>
+        </div>
+        <button class="ep-link" type="button" data-select="2" aria-controls="billboard" aria-pressed="false" aria-label="Show Episode 3: The Bloom"></button>
+      </li>
+    </ol>
+
+    <div class="billboard reveal" id="billboard">
+      <img class="bb-img is-active" data-bb-img="0" src="assets/images/still-harvest.jpg" alt="The girl on a cherry-tree branch lifting ripe cherries into a floating basket with her wand">
+      <img class="bb-img" data-bb-img="1" src="assets/images/still-crank.jpg" alt="The girl on a small step turning the hand crank of the grinder at the little mill" loading="lazy">
+      <img class="bb-img" data-bb-img="2" src="assets/images/frame-03.jpg" alt="Coffee pouring into a white cup with a white flower floating on top" loading="lazy">
+      <div class="inner" id="bb-inner">
+        <div class="eyebrow" id="bb-eyebrow">Now showing · Episode 1</div>
+        <h3 id="bb-title">Cherry Hill</h3>
+        <p id="bb-text">A girl rides a cart across the floating islands, leaps to the cherry tree and gathers the ripe red cherries with her wand.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" id="bb-play" href="assets/videos/Scene_01_The_Cherry_hill_st.mp4" data-ep="0">
+            <svg viewBox="0 0 14 16" aria-hidden="true"><path d="M1 1 L13 8 L1 15 Z" fill="currentColor"/></svg>
+            <span id="bb-play-label">Play episode 1</span>
+          </a>
+        </div>
+      </div>
+      <div class="bb-dots" aria-hidden="true"><i class="is-active"></i><i></i><i></i></div>
+    </div>
+
+    <div class="film-bar reveal">
+      <span>Prefer one sitting? The full film is the three episodes in order.</span>
+      <button class="btn btn-ghost" type="button" data-play-all>Play all three</button>
+    </div>
+  </div>
+</section>
+
+<!-- THE GIRL -->
+<section class="section alt" id="girl" aria-labelledby="girl-title">
+  <div class="wrap split">
+    <div class="shots reveal">
+      <figure class="shot" style="margin:0"><img src="assets/images/still-harvest.jpg" alt="The girl in a straw hat with braids and a flower, holding a wand beside a floating basket" loading="lazy"></figure>
+      <figure class="shot" style="margin:0"><img src="assets/images/still-crank.jpg" alt="The girl on a small step turning the hand crank of a coffee grinder" loading="lazy"></figure>
+    </div>
+    <div class="copy reveal">
+      <div class="eyebrow">Your host</div>
+      <h2 id="girl-title">Meet the girl with the wand.</h2>
+      <p>She picks the cherries, tends the little fire and pours the brew, in every episode. A straw hat, two braids, a flower pin and a very curious bee keep her company.</p>
+      <p>She is built in Blender from 137 named, parented objects with keyed controls. Her wave to the bee was keyframed in the Graph Editor after a FreeMoCap motion-capture attempt proved too heavy for the laptop to process.</p>
+      <a class="textlink" href="behind-the-scenes.html">See how she was made</a>
+    </div>
+  </div>
+</section>
+
+<!-- CRAFT -->
+<section class="section" id="craft" aria-labelledby="craft-title">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">How it's made</div>
+      <h2 id="craft-title">Modelled, animated, voiced and mixed by hand.</h2>
+      <p>The characters, islands and animation were built in Blender. The story, the voice and the final edit are Anugraha's own.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal"><h3>Blender</h3><p>Every island, prop and character was modelled and animated in Blender, with Bezier curves and Python scripts for the milk stream, the coffee waterfall and the girl's limb poses.</p></article>
+      <article class="card reveal"><h3>Compositing</h3><p>In Scene 1 the girl and the scenery are rendered as two layers and joined with Alpha Over nodes in the Blender compositor.</p></article>
+      <article class="card reveal"><h3>Voice and sound</h3><p>Anugraha wrote the script and recorded the narration in her own voice, pitch-shifted to sound like a storyteller. The music and effects were generated with Python code.</p></article>
+      <article class="card reveal"><h3>Edit and captions</h3><p>Each episode was edited in Canva: narration, music and effects synced to the picture, and every subtitle timed to the narration by hand.</p></article>
+    </div>
+    <div class="made-with reveal" aria-label="Tools used">
+      <span class="made-with-label">Made with</span>
+      <span class="made-with-item"><img src="assets/images/tools/blender.svg" alt="" width="28" height="28">Blender <small>modelling, animation and compositing</small></span>
+      <span class="made-with-item"><img src="assets/images/tools/figma.svg" alt="" width="28" height="28">Figma <small>posters and logo</small></span>
+      <span class="made-with-item"><img src="assets/images/tools/canva.svg" alt="" width="28" height="28">Canva <small>editing, audio sync and subtitles</small></span>
+    </div>
+    <p style="margin-top:40px" class="reveal"><a class="textlink" href="behind-the-scenes.html">Read the full behind-the-scenes, including what AI helped with</a></p>
+  </div>
+</section>
+
+<!-- DOCUMENTS -->
+<section class="section alt" id="documents" aria-labelledby="documents-title">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">For assessment</div>
+      <h2 id="documents-title">Report and presentation.</h2>
+      <p>The written report and presentation slides for COMP5415, ready to open or download.</p>
+    </div>
+    <div class="docs">
+      <article class="doc reveal">
+        <span class="doc-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2.5h7.5L19.5 7.5V20a1.5 1.5 0 0 1-1.5 1.5H7A1.5 1.5 0 0 1 5.5 20V4A1.5 1.5 0 0 1 7 2.5z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M14.5 2.5V7.5h5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12h7M8.5 15h7M8.5 18h4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        <div class="doc-body">
+          <div class="doc-meta">Report · PDF</div>
+          <h3>Project report</h3>
+          <p>How BLOOM was planned, designed and made, with the tools used and what AI helped with.</p>
+        </div>
+        <div class="doc-actions">
+          <a class="btn btn-primary" href="assets/docs/BLOOM_Report.pdf" download><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8m0 0l-3.5-3.5M8 10l3.5-3.5M2.5 13.5h11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Download report</a>
+          <a class="textlink" href="assets/docs/BLOOM_Report.pdf" target="_blank" rel="noopener">Open in a new tab</a>
+        </div>
+      </article>
+      <article class="doc reveal">
+        <span class="doc-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4" width="19" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17v3.5M8 21h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M7 13l3-3 2.5 2.5L17 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div class="doc-body">
+          <div class="doc-meta">Presentation · PDF</div>
+          <h3>Presentation slides</h3>
+          <p>The slides used to present BLOOM, from cherry to cup.</p>
+        </div>
+        <div class="doc-actions">
+          <a class="btn btn-primary" href="assets/docs/BLOOM_Presentation.pdf" download><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8m0 0l-3.5-3.5M8 10l3.5-3.5M2.5 13.5h11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Download slides</a>
+          <a class="textlink" href="assets/docs/BLOOM_Presentation.pdf" target="_blank" rel="noopener">Open in a new tab</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="cta" aria-labelledby="cta-title">
+  <div class="wrap">
+    <h2 id="cta-title">Ready when you are.</h2>
+    <button class="btn" type="button" data-play-all>
+      <svg viewBox="0 0 14 16" aria-hidden="true"><path d="M1 1 L13 8 L1 15 Z" fill="currentColor"/></svg>
+      Watch Season 1
+    </button>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>BLOOM · FROM CHERRY TO CUP</span>
+    <span>COMP5415 · UNIVERSITY OF SYDNEY</span>
+    <span class="footer-credit">AI assistance: ChatGPT Astra and Claude Opus · Lab practice: COMP5415 unit coordinator, University of Sydney</span>
+  </div>
+</footer>
+
+<!-- Video player -->
+<dialog class="player" id="player" aria-labelledby="player-title">
+  <div class="player-top">
+    <div>
+      <span class="eyebrow" id="player-eyebrow">Episode 1</span>
+      <h2 id="player-title">Cherry Hill</h2>
+    </div>
+    <button class="close" type="button" id="player-close" aria-label="Close the player">&#10005;</button>
+  </div>
+  <video id="pv" controls playsinline preload="metadata" poster="assets/images/frame-01.jpg"></video>
+  <div class="player-bottom">
+    <div class="queue" id="queue" role="group" aria-label="Episodes"></div>
+    <p class="player-note" id="pnote" aria-live="polite">Sound on for the narration.</p>
+  </div>
+</dialog>
+
+<script src="js/main.js"></script>
+</body>
+</html>

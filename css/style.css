@@ -301,7 +301,8 @@ tr:last-child td{border-bottom:0}
   .doc-actions .btn{max-width:100%;padding-inline:20px}
   .nav a{padding:10px 12px}
   .brand{font-size:22px}
-  .rail{grid-template-columns:repeat(3,minmax(0,82%));gap:16px}
+  .rail{grid-template-columns:minmax(0,1fr);gap:24px;margin:0;padding:0;overflow:visible;scroll-snap-type:none}
+  .rail>li{scroll-snap-align:none}
   .cards{grid-template-columns:1fr}
   .posters{grid-template-columns:1fr 1fr}
   .step{grid-template-columns:1fr;gap:8px}

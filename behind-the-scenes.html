@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Behind the scenes — BLOOM</title>
 <meta name="description" content="How BLOOM was made: Blender modelling, animation and Alpha Over compositing, Figma logo and posters, Canva editing and subtitles, narration in Anugraha's own voice, and exactly where AI helped.">
 <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
@@ -14,7 +14,8 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="BLOOM home">BLOOM</a>
-    <nav class="nav" aria-label="Main">
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false">Menu</button>
+    <nav class="nav" id="main-nav" aria-label="Main">
       <a href="index.html">Home</a>
       <a href="index.html#episodes">Episodes</a>
       <a href="index.html#girl">Meet the girl</a>
@@ -41,7 +42,7 @@
         <h2 id="who-title">Who made what.</h2>
         <p>Every part of BLOOM: the tools used, what Anugraha did herself, and where AI helped.</p>
       </div>
-      <div class="table-wrap reveal">
+      <div class="table-wrap reveal" role="region" aria-labelledby="who-title" tabindex="0">
         <table aria-label="Who made each part of BLOOM">
           <thead><tr><th scope="col">Part</th><th scope="col">Tools</th><th scope="col">Anugraha's own work</th><th scope="col">AI assistance</th></tr></thead>
           <tbody>

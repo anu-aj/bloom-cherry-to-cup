@@ -4,6 +4,44 @@
   document.documentElement.classList.remove('no-js');
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ---------- Compact navigation and measured anchor offset ---------- */
+  var header = document.querySelector('.site-header');
+  var navToggle = document.querySelector('.nav-toggle');
+  var mainNav = document.getElementById('main-nav');
+  if (header && navToggle && mainNav) {
+    var closeNav = function (restoreFocus) {
+      navToggle.setAttribute('aria-expanded', 'false');
+      mainNav.classList.remove('is-open');
+      if (restoreFocus) navToggle.focus();
+    };
+    navToggle.addEventListener('click', function () {
+      var open = navToggle.getAttribute('aria-expanded') !== 'true';
+      navToggle.setAttribute('aria-expanded', String(open));
+      mainNav.classList.toggle('is-open', open);
+    });
+    mainNav.addEventListener('click', function (e) {
+      if (e.target.closest('a')) closeNav(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mainNav.classList.contains('is-open')) closeNav(true);
+    });
+    document.addEventListener('click', function (e) {
+      if (!header.contains(e.target)) closeNav(false);
+    });
+    header.addEventListener('focusout', function (e) {
+      if (!header.contains(e.relatedTarget)) closeNav(false);
+    });
+    var measureHeader = function () {
+      document.documentElement.style.setProperty('--header-height', Math.ceil(header.getBoundingClientRect().height) + 'px');
+    };
+    if ('ResizeObserver' in window) new ResizeObserver(measureHeader).observe(header);
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 1100) closeNav(false);
+      measureHeader();
+    });
+    measureHeader();
+  }
+
   /* ---------- Episode data (swap files here if you re-export) ---------- */
   var EPISODES = [
     { n: 1, title: 'Cherry Hill',     src: 'assets/videos/Scene_01_The_Cherry_hill_st.mp4', poster: 'assets/images/frame-01.jpg', vtt: 'captions/episode-01.vtt',
@@ -21,7 +59,7 @@
       entries.forEach(function (e) {
         if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0, rootMargin: '0px 0px -24px 0px' });
     revealEls.forEach(function (el) { io.observe(el); });
   } else {
     revealEls.forEach(function (el) { el.classList.add('in'); });
@@ -46,12 +84,15 @@
         x = r.left + r.width / 2; y = r.top + r.height / 2;
       }
       var bee = document.createElement('span');
+      // Keep the decorative flight inside narrow viewports, including edge taps.
+      x = Math.max(28, Math.min(window.innerWidth - 28, x));
+      var drift = Math.max((28 - x) / 1.3, Math.min((window.innerWidth - 28 - x) / 1.3, Math.random() * 80 - 40));
       bee.className = 'bee-pop';
       bee.setAttribute('aria-hidden', 'true');
       bee.innerHTML = BEE_SVG;
       bee.style.left = x + 'px';
       bee.style.top = y + 'px';
-      bee.style.setProperty('--drift', (Math.random() * 80 - 40).toFixed(0) + 'px');
+      bee.style.setProperty('--drift', drift.toFixed(2) + 'px');
       if (Math.random() < 0.5) bee.classList.add('flip');
       // inside an open modal the page body sits below the top layer, so fly from the dialog
       var host = (e.target.closest && e.target.closest('dialog[open]')) || document.body;

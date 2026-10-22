@@ -194,7 +194,7 @@
     </div>
     <div class="cards">
       <article class="card reveal"><h3>Blender</h3><p>Every island, prop and character was modelled and animated in Blender, with Bezier curves and Python scripts for the milk stream, the coffee waterfall and the girl's limb poses.</p></article>
-      <article class="card reveal"><h3>Compositing</h3><p>In Scene 1 the girl and the scenery are rendered as two layers and joined with Alpha Over nodes in the Blender compositor.</p></article>
+      <article class="card reveal"><h3 class="card-title-zoom">Compositing <button class="zoom-btn" type="button" data-zoom="compositing" aria-label="Enlarge the Scene 1 compositing node setup"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6"/></svg></button></h3><p>In Scene 1 the girl and the scenery are rendered as two layers and joined with Alpha Over nodes in the Blender compositor.</p></article>
       <article class="card reveal"><h3>Voice and sound</h3><p>Anugraha wrote the script and recorded the narration in her own voice, pitch-shifted to sound like a storyteller. The music and effects were generated with Python code.</p></article>
       <article class="card reveal"><h3>Edit and captions</h3><p>Each episode was edited in Canva: narration, music and effects synced to the picture, and every subtitle timed to the narration by hand.</p></article>
     </div>
@@ -287,6 +287,28 @@
     <span class="footer-credit">AI assistance: ChatGPT Astra and Claude Opus · Lab practice: COMP5415 unit coordinator, University of Sydney</span>
   </div>
 </footer>
+
+<!-- Compositing node setup -->
+<dialog class="player zoom-dialog" id="zoom-compositing" aria-labelledby="zoom-title">
+  <div class="player-top">
+    <div>
+      <span class="eyebrow">How it's made · Compositing</span>
+      <h2 id="zoom-title">Scene 1 node setup</h2>
+    </div>
+    <button class="close" type="button" data-zoom-close aria-label="Close the image">&#10005;</button>
+  </div>
+  <a class="zoom-figure" href="assets/images/compositing-nodes.png" target="_blank" rel="noopener" title="Open full size in a new tab"><img src="assets/images/compositing-nodes.png" alt="Blender compositor node tree for Scene 1: a sky colour, the background layer and the girl layer joined by two Alpha Over nodes into the composite, viewer and a PNG file output" width="1909" height="1078" loading="lazy"></a>
+  <div class="zoom-text">
+    <p>Scene 1 was rendered as two separate view layers from the same scene, then combined in the Blender compositor:</p>
+    <ol>
+      <li><strong>Background layer</strong> renders the islands and scenery, keeping the girl's shadows and reflections so she still sits in the world.</li>
+      <li><strong>Girl layer</strong> renders only the girl as transparent RGBA, with occlusion so objects in front of her still hide her correctly.</li>
+      <li>The first <strong>Alpha Over</strong> node lays the background render over the original camera sky colour, filling any transparent areas.</li>
+      <li>The second <strong>Alpha Over</strong> node places the girl on top of that background to make the final frame.</li>
+      <li>The result goes to the <strong>Composite</strong> and <strong>Viewer</strong>, and a <strong>File Output</strong> node saves the girl, the background and the final composite as separate PNG sequences.</li>
+    </ol>
+  </div>
+</dialog>
 
 <!-- Video player -->
 <dialog class="player" id="player" aria-labelledby="player-title">

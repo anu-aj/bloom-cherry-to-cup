@@ -161,6 +161,18 @@ dialog.player::backdrop{background:rgba(10,5,3,.82);backdrop-filter:blur(4px)}
 .queue button:hover{border-color:var(--kraft)}
 .player-note{font-size:13px;color:#B89B78}
 
+/* Compositing image zoom */
+.card-title-zoom{display:flex;align-items:center;gap:10px}
+.zoom-btn{all:unset;cursor:zoom-in;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:var(--cream);background:rgba(244,235,221,.1);border:1.5px solid var(--cherry);transition:background .2s,transform .2s}
+.zoom-btn:hover{background:var(--cherry);transform:scale(1.08)}
+.zoom-btn:focus-visible{outline:3px solid var(--ember-light);outline-offset:2px}
+.zoom-dialog{width:min(1400px,96%)}
+.zoom-figure{display:block;background:#000;cursor:zoom-in}
+.zoom-figure img{display:block;width:100%;height:auto}
+.zoom-text{padding:16px 20px 22px;color:var(--muted);font-size:15px;max-width:900px}
+.zoom-text ol{margin:10px 0 0;padding-left:22px;display:grid;gap:6px}
+.zoom-text strong{color:var(--cream)}
+
 /* Behind-the-scenes page */
 .page-hero{padding:clamp(56px,8vw,96px) 0 40px;background:radial-gradient(ellipse at 80% 0%,#4A2A18 0%,var(--espresso) 70%)}
 .page-hero h1{font-size:clamp(44px,7vw,84px);font-weight:700;margin:14px 0 18px;max-width:900px}

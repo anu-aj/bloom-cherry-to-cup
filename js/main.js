@@ -245,6 +245,19 @@
   }
 
   /* ---------- Episode player ---------- */
+  // Image zoom dialogs (compositing node setup)
+  document.querySelectorAll('[data-zoom]').forEach(function (btn) {
+    var zd = document.getElementById('zoom-' + btn.getAttribute('data-zoom'));
+    if (!zd) return;
+    btn.addEventListener('click', function () {
+      if (typeof zd.showModal === 'function') zd.showModal(); else zd.setAttribute('open', '');
+    });
+    function shut() { if (typeof zd.close === 'function') zd.close(); else zd.removeAttribute('open'); }
+    zd.querySelector('[data-zoom-close]').addEventListener('click', shut);
+    zd.addEventListener('click', function (e) { if (e.target === zd) shut(); });
+    zd.addEventListener('close', function () { btn.focus(); });
+  });
+
   var dlg = document.getElementById('player');
   if (!dlg) return;
   var video = document.getElementById('pv');
